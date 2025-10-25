@@ -30,6 +30,11 @@ docs = [
     { name = "watchdog" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "pre-commit" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "ipykernel" },
@@ -49,6 +54,9 @@ requires-dist = [
     { name = "watchdog", marker = "extra == 'docs'" },
 ]
 provides-extras = ["dev", "docs"]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pre-commit", specifier = ">=4.3.0" }]
 
 [[package]]
 name = "appnope"

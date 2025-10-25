@@ -168,3 +168,5 @@ Before starting a new session, remember to do a `git pull` and keep your tools u
 Each time forward progress is made, remember to git add-commit-push.
 
 
+### 4.1 to run py scripts use
+uv run python -m analytics_project.demo_module_basics
