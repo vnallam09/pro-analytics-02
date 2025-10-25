@@ -40,6 +40,7 @@ Repository = "https://github.com/denisecase/pro-analytics-02-starter"
 dev = [
   "pytest", # run some tests automatically
   "pytest-cov", # coverage report for more visibility
+  "pre-commit", # Git hooks for code quality
 ]
 docs = [
   "mkdocs",                # Core MkDocs
