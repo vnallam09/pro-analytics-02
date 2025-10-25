@@ -2,7 +2,7 @@
 
 > Use this repo to start a professional Python project.
 
-- Additional information: <https://github.com/denisecase/pro-analytics-02>
+- Additional information: https://github.com/vnallam09/pro-analytics-02
 - Project organization: [STRUCTURE](./STRUCTURE.md)
 - Build professional skills:
   - **Environment Management**: Every project in isolation

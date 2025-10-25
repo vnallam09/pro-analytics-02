@@ -124,11 +124,11 @@ If `code .` doesn’t work, re-run the installation and ensure that **Add to PAT
 
 When all of these are true, your setup is complete:
 
-- [ ] You can see hidden files and folders.
-- [ ] You can see file extensions.
-- [ ] All three version commands respond with version numbers.
-- [ ] Your Git configuration information is correct.
-- [ ] You can open VS Code with `code .`
+- [O] You can see hidden files and folders.
+- [O] You can see file extensions.
+- [O] All three version commands respond with version numbers.
+- [O] Your Git configuration information is correct.
+- [O] You can open VS Code with `code .`
 
 Congratulations — your professional analytics environment is ready to go!
 (Honestly, getting set up correctly IS the hardest part about using Python for analytics - time to take a break and celebrate!)
