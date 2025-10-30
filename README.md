@@ -1,3 +1,10 @@
+## P2 Notes (Reading raw data into DataFrames)
+- Created `src/analytics_project/data_prep.py` to read raw CSVs into pandas DataFrames.
+- Ran the module and logged shapes to `project.log`.
+- Commands used:
+  - `python -m analytics_project.data_prep`
+  - `git add -A && git commit -m "Add data_prep and log shapes" && git push origin main`
+
 # Pro Analytics 02 Python Starter Repository
 
 > Use this repo to start a professional Python project.
