@@ -86,3 +86,34 @@ Norwegian: Hei! Velkommen til Python-programmering.
 2025-10-29 22:15:INFO    AT data_prep.py:32: Reading raw data from C:\Users\nalla\Documents\github\pro-analytics-02\data\raw\sales_data.csv.
 2025-10-29 22:15:INFO    AT data_prep.py:35: sales_data.csv: loaded DataFrame with shape 2001 rows x 7 cols
 2025-10-29 22:15:INFO    AT data_prep.py:64: Data preparation complete.
+2025-11-06 20:36:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-06 20:36:INFO    AT prepare_customers.py:164: ==================================
+2025-11-06 20:36:INFO    AT prepare_customers.py:165: STARTING prepare_customers_data.py
+2025-11-06 20:36:INFO    AT prepare_customers.py:166: ==================================
+2025-11-06 20:36:INFO    AT prepare_customers.py:168: Root         : C:\GitHub_Repo\pro-analytics-02
+2025-11-06 20:36:INFO    AT prepare_customers.py:169: data/raw     : C:\GitHub_Repo\pro-analytics-02\data\raw
+2025-11-06 20:36:INFO    AT prepare_customers.py:170: data/prepared: C:\GitHub_Repo\pro-analytics-02\data\prepared
+2025-11-06 20:36:INFO    AT prepare_customers.py:171: scripts      : C:\GitHub_Repo\pro-analytics-02\src
+2025-11-06 20:36:INFO    AT prepare_customers.py:59: READING: C:\GitHub_Repo\pro-analytics-02\data\raw\customers_data.csv.
+2025-11-06 20:36:INFO    AT prepare_customers.py:183: Initial dataframe columns: CustomerID, Name, Region, JoinDate, CreditScore, IndustryType
+2025-11-06 20:36:INFO    AT prepare_customers.py:184: Initial dataframe shape: (201, 6)
+2025-11-06 20:36:INFO    AT prepare_customers.py:96: FUNCTION START: remove_duplicates with dataframe shape=(201, 6)
+2025-11-06 20:36:INFO    AT prepare_customers.py:100: Original dataframe shape: (201, 6)
+2025-11-06 20:36:INFO    AT prepare_customers.py:101: Deduped  dataframe shape: (200, 6)
+2025-11-06 20:36:INFO    AT prepare_customers.py:116: FUNCTION START: handle_missing_values with dataframe shape=(200, 6)
+2025-11-06 20:36:INFO    AT prepare_customers.py:120: Total missing values before handling: 1
+2025-11-06 20:36:INFO    AT prepare_customers.py:130: Total missing values after handling: 1
+2025-11-06 20:36:INFO    AT prepare_customers.py:131: 200 records remaining after handling missing values.
+2025-11-06 20:36:INFO    AT prepare_customers.py:137: FUNCTION START: remove_outliers with dataframe shape=(200, 6)
+2025-11-06 20:36:INFO    AT prepare_customers.py:143: Filtered CreditScore to range [600, 850]
+2025-11-06 20:36:INFO    AT prepare_customers.py:149: Filtered to valid regions: ['North', 'South', 'East', 'West', 'Central']
+2025-11-06 20:36:INFO    AT prepare_customers.py:152: Removed 66 outlier rows
+2025-11-06 20:36:INFO    AT prepare_customers.py:153: 134 records remaining after removing outliers.
+2025-11-06 20:36:INFO    AT prepare_customers.py:76: FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(134, 6)
+2025-11-06 20:36:INFO    AT prepare_customers.py:81: Data saved to C:\GitHub_Repo\pro-analytics-02\data\prepared\customers_prepared.csv
+2025-11-06 20:36:INFO    AT prepare_customers.py:209: ==================================
+2025-11-06 20:36:INFO    AT prepare_customers.py:210: Original shape: (134, 6)
+2025-11-06 20:36:INFO    AT prepare_customers.py:211: Cleaned shape:  (201, 6)
+2025-11-06 20:36:INFO    AT prepare_customers.py:212: ==================================
+2025-11-06 20:36:INFO    AT prepare_customers.py:213: FINISHED prepare_customers_data.py
+2025-11-06 20:36:INFO    AT prepare_customers.py:214: ==================================
