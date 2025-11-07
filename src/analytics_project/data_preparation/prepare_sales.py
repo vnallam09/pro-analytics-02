@@ -35,9 +35,10 @@ from analytics_project.utils_logger import logger
 # Constants
 SCRIPTS_DATA_PREP_DIR: pathlib.Path = (
     pathlib.Path(__file__).resolve().parent
-)  # Directory of the current script
-SCRIPTS_DIR: pathlib.Path = SCRIPTS_DATA_PREP_DIR.parent
-PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR.parent
+)  # Directory of the current script (data_preparation)
+SCRIPTS_DIR: pathlib.Path = SCRIPTS_DATA_PREP_DIR.parent  # analytics_project
+SRC_DIR: pathlib.Path = SCRIPTS_DIR.parent  # src
+PROJECT_ROOT: pathlib.Path = SRC_DIR.parent  # project root
 DATA_DIR: pathlib.Path = PROJECT_ROOT / "data"
 RAW_DATA_DIR: pathlib.Path = DATA_DIR / "raw"
 PREPARED_DATA_DIR: pathlib.Path = DATA_DIR / "prepared"  # place to store prepared data
