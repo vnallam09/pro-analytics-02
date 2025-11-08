@@ -1398,3 +1398,156 @@ dtype: int64
 2025-11-06 21:11:INFO    AT prepare_sales.py:452: ==================================
 2025-11-06 21:11:INFO    AT prepare_sales.py:453: FINISHED prepare_sales_data.py
 2025-11-06 21:11:INFO    AT prepare_sales.py:454: ==================================
+2025-11-07 20:37:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-07 20:37:INFO    AT data_prep.py:155: ================================================================================
+2025-11-07 20:37:INFO    AT data_prep.py:156: Starting data preparation with DataScrubber...
+2025-11-07 20:37:INFO    AT data_prep.py:157: ================================================================================
+2025-11-07 20:37:INFO    AT data_prep.py:165: --------------------------------------------------------------------------------
+2025-11-07 20:37:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\customers_data.csv.
+2025-11-07 20:37:INFO    AT data_prep.py:40: customers_data.csv: loaded DataFrame with shape 201 rows x 6 cols
+2025-11-07 20:37:INFO    AT data_prep.py:64: Processing customer data...
+2025-11-07 20:37:INFO    AT data_prep.py:69: Before cleaning - Null counts: 1, Duplicates: 1
+2025-11-07 20:39:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-07 20:39:INFO    AT data_prep.py:167: ================================================================================
+2025-11-07 20:39:INFO    AT data_prep.py:168: Starting data preparation with DataScrubber...
+2025-11-07 20:39:INFO    AT data_prep.py:169: ================================================================================
+2025-11-07 20:39:INFO    AT data_prep.py:177: --------------------------------------------------------------------------------
+2025-11-07 20:39:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\customers_data.csv.
+2025-11-07 20:39:INFO    AT data_prep.py:40: customers_data.csv: loaded DataFrame with shape 201 rows x 6 cols
+2025-11-07 20:39:INFO    AT data_prep.py:64: Processing customer data...
+2025-11-07 20:39:INFO    AT data_prep.py:69: Before cleaning - Null counts: 1, Duplicates: 1
+2025-11-07 20:39:INFO    AT data_prep.py:84: Customer data processed: 200 rows
+2025-11-07 20:39:INFO    AT data_prep.py:160: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\customers_prepared.csv
+2025-11-07 20:39:INFO    AT data_prep.py:184: --------------------------------------------------------------------------------
+2025-11-07 20:39:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\products_data.csv.
+2025-11-07 20:39:INFO    AT data_prep.py:40: products_data.csv: loaded DataFrame with shape 100 rows x 6 cols
+2025-11-07 20:39:INFO    AT data_prep.py:97: Processing product data...
+2025-11-07 20:39:INFO    AT data_prep.py:102: Before cleaning - Null counts: 1, Duplicates: 0
+2025-11-07 20:39:INFO    AT data_prep.py:113: Product data processed: 100 rows
+2025-11-07 20:39:INFO    AT data_prep.py:160: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\products_prepared.csv
+2025-11-07 20:39:INFO    AT data_prep.py:191: --------------------------------------------------------------------------------
+2025-11-07 20:39:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\sales_data.csv.
+2025-11-07 20:39:INFO    AT data_prep.py:40: sales_data.csv: loaded DataFrame with shape 2001 rows x 9 cols
+2025-11-07 20:39:INFO    AT data_prep.py:126: Processing sales data...
+2025-11-07 20:39:INFO    AT data_prep.py:131: Before cleaning - Null counts: 2, Duplicates: 0
+2025-11-07 20:39:INFO    AT data_prep.py:142: Sales data processed: 1999 rows
+2025-11-07 20:39:INFO    AT data_prep.py:160: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\sales_prepared.csv
+2025-11-07 20:39:INFO    AT data_prep.py:197: ================================================================================
+2025-11-07 20:39:INFO    AT data_prep.py:198: Data preparation complete.
+2025-11-07 20:39:INFO    AT data_prep.py:199: ================================================================================
+2025-11-07 20:44:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-07 20:44:INFO    AT data_prep.py:173: ================================================================================
+2025-11-07 20:44:INFO    AT data_prep.py:174: Starting data preparation with DataScrubber...
+2025-11-07 20:44:INFO    AT data_prep.py:175: ================================================================================
+2025-11-07 20:44:INFO    AT data_prep.py:183: --------------------------------------------------------------------------------
+2025-11-07 20:44:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\customers_data.csv.
+2025-11-07 20:44:INFO    AT data_prep.py:40: customers_data.csv: loaded DataFrame with shape 201 rows x 6 cols
+2025-11-07 20:44:INFO    AT data_prep.py:64: Processing customer data...
+2025-11-07 20:44:INFO    AT data_prep.py:71: Before cleaning - Null counts: 1, Duplicates: 1
+2025-11-07 20:44:INFO    AT data_prep.py:86: Customer data processed: 200 rows
+2025-11-07 20:44:INFO    AT data_prep.py:166: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\customers_prepared.csv
+2025-11-07 20:44:INFO    AT data_prep.py:190: --------------------------------------------------------------------------------
+2025-11-07 20:44:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\products_data.csv.
+2025-11-07 20:44:INFO    AT data_prep.py:40: products_data.csv: loaded DataFrame with shape 100 rows x 6 cols
+2025-11-07 20:44:INFO    AT data_prep.py:99: Processing product data...
+2025-11-07 20:44:INFO    AT data_prep.py:106: Before cleaning - Null counts: 1, Duplicates: 0
+2025-11-07 20:44:INFO    AT data_prep.py:117: Product data processed: 100 rows
+2025-11-07 20:44:INFO    AT data_prep.py:166: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\products_prepared.csv
+2025-11-07 20:44:INFO    AT data_prep.py:197: --------------------------------------------------------------------------------
+2025-11-07 20:44:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\sales_data.csv.
+2025-11-07 20:44:INFO    AT data_prep.py:40: sales_data.csv: loaded DataFrame with shape 2001 rows x 9 cols
+2025-11-07 20:44:INFO    AT data_prep.py:130: Processing sales data...
+2025-11-07 20:44:INFO    AT data_prep.py:137: Before cleaning - Null counts: 2, Duplicates: 0
+2025-11-07 20:44:INFO    AT data_prep.py:148: Sales data processed: 1999 rows
+2025-11-07 20:44:INFO    AT data_prep.py:166: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\sales_prepared.csv
+2025-11-07 20:44:INFO    AT data_prep.py:203: ================================================================================
+2025-11-07 20:44:INFO    AT data_prep.py:204: Data preparation complete.
+2025-11-07 20:44:INFO    AT data_prep.py:205: ================================================================================
+2025-11-07 20:46:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-07 20:46:INFO    AT data_prep.py:218: ================================================================================
+2025-11-07 20:46:INFO    AT data_prep.py:219: Starting data preparation with DataScrubber...
+2025-11-07 20:46:INFO    AT data_prep.py:220: ================================================================================
+2025-11-07 20:46:INFO    AT data_prep.py:228: --------------------------------------------------------------------------------
+2025-11-07 20:46:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\customers_data.csv.
+2025-11-07 20:46:INFO    AT data_prep.py:40: customers_data.csv: loaded DataFrame with shape 201 rows x 6 cols
+2025-11-07 20:46:INFO    AT data_prep.py:64: Processing customer data...
+2025-11-07 20:46:INFO    AT data_prep.py:71: Before cleaning - Null counts: 1, Duplicates: 1
+2025-11-07 20:46:INFO    AT data_prep.py:97: After cleaning - Null counts: 0, Duplicates: 0
+2025-11-07 20:46:INFO    AT data_prep.py:101: Customer data processed: 200 rows
+2025-11-07 20:46:INFO    AT data_prep.py:211: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\customers_prepared.csv
+2025-11-07 20:46:INFO    AT data_prep.py:235: --------------------------------------------------------------------------------
+2025-11-07 20:46:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\products_data.csv.
+2025-11-07 20:46:INFO    AT data_prep.py:40: products_data.csv: loaded DataFrame with shape 100 rows x 6 cols
+2025-11-07 20:46:INFO    AT data_prep.py:114: Processing product data...
+2025-11-07 20:46:INFO    AT data_prep.py:121: Before cleaning - Null counts: 1, Duplicates: 0
+2025-11-07 20:46:INFO    AT data_prep.py:139: After cleaning - Null counts: 0, Duplicates: 0
+2025-11-07 20:46:INFO    AT data_prep.py:143: Product data processed: 100 rows
+2025-11-07 20:46:INFO    AT data_prep.py:211: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\products_prepared.csv
+2025-11-07 20:46:INFO    AT data_prep.py:242: --------------------------------------------------------------------------------
+2025-11-07 20:46:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\sales_data.csv.
+2025-11-07 20:46:INFO    AT data_prep.py:40: sales_data.csv: loaded DataFrame with shape 2001 rows x 9 cols
+2025-11-07 20:46:INFO    AT data_prep.py:156: Processing sales data...
+2025-11-07 20:46:INFO    AT data_prep.py:163: Before cleaning - Null counts: 2, Duplicates: 0
+2025-11-07 20:47:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-07 20:47:INFO    AT data_prep.py:217: ================================================================================
+2025-11-07 20:47:INFO    AT data_prep.py:218: Starting data preparation with DataScrubber...
+2025-11-07 20:47:INFO    AT data_prep.py:219: ================================================================================
+2025-11-07 20:47:INFO    AT data_prep.py:227: --------------------------------------------------------------------------------
+2025-11-07 20:47:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\customers_data.csv.
+2025-11-07 20:47:INFO    AT data_prep.py:40: customers_data.csv: loaded DataFrame with shape 201 rows x 6 cols
+2025-11-07 20:47:INFO    AT data_prep.py:64: Processing customer data...
+2025-11-07 20:47:INFO    AT data_prep.py:71: Before cleaning - Null counts: 1, Duplicates: 1
+2025-11-07 20:47:INFO    AT data_prep.py:97: After cleaning - Null counts: 0, Duplicates: 0
+2025-11-07 20:47:INFO    AT data_prep.py:101: Customer data processed: 200 rows
+2025-11-07 20:47:INFO    AT data_prep.py:210: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\customers_prepared.csv
+2025-11-07 20:47:INFO    AT data_prep.py:234: --------------------------------------------------------------------------------
+2025-11-07 20:47:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\products_data.csv.
+2025-11-07 20:47:INFO    AT data_prep.py:40: products_data.csv: loaded DataFrame with shape 100 rows x 6 cols
+2025-11-07 20:47:INFO    AT data_prep.py:114: Processing product data...
+2025-11-07 20:47:INFO    AT data_prep.py:121: Before cleaning - Null counts: 1, Duplicates: 0
+2025-11-07 20:47:INFO    AT data_prep.py:139: After cleaning - Null counts: 0, Duplicates: 0
+2025-11-07 20:47:INFO    AT data_prep.py:143: Product data processed: 100 rows
+2025-11-07 20:47:INFO    AT data_prep.py:210: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\products_prepared.csv
+2025-11-07 20:47:INFO    AT data_prep.py:241: --------------------------------------------------------------------------------
+2025-11-07 20:47:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\sales_data.csv.
+2025-11-07 20:47:INFO    AT data_prep.py:40: sales_data.csv: loaded DataFrame with shape 2001 rows x 9 cols
+2025-11-07 20:47:INFO    AT data_prep.py:156: Processing sales data...
+2025-11-07 20:47:INFO    AT data_prep.py:163: Before cleaning - Null counts: 2, Duplicates: 0
+2025-11-07 20:47:INFO    AT data_prep.py:188: After cleaning - Null counts: 0, Duplicates: 0
+2025-11-07 20:47:INFO    AT data_prep.py:192: Sales data processed: 1999 rows
+2025-11-07 20:47:INFO    AT data_prep.py:210: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\sales_prepared.csv
+2025-11-07 20:47:INFO    AT data_prep.py:247: ================================================================================
+2025-11-07 20:47:INFO    AT data_prep.py:248: Data preparation complete.
+2025-11-07 20:47:INFO    AT data_prep.py:249: ================================================================================
+2025-11-07 20:54:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-07 20:54:INFO    AT data_prep.py:224: ================================================================================
+2025-11-07 20:54:INFO    AT data_prep.py:225: Starting data preparation with DataScrubber...
+2025-11-07 20:54:INFO    AT data_prep.py:226: ================================================================================
+2025-11-07 20:54:INFO    AT data_prep.py:234: --------------------------------------------------------------------------------
+2025-11-07 20:54:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\customers_data.csv.
+2025-11-07 20:54:INFO    AT data_prep.py:40: customers_data.csv: loaded DataFrame with shape 201 rows x 6 cols
+2025-11-07 20:54:INFO    AT data_prep.py:64: Processing customer data...
+2025-11-07 20:54:INFO    AT data_prep.py:71: Before cleaning - Null counts: 1, Duplicates: 1
+2025-11-07 20:54:INFO    AT data_prep.py:97: After cleaning - Null counts: 0, Duplicates: 0
+2025-11-07 20:54:INFO    AT data_prep.py:101: Customer data processed: 200 rows
+2025-11-07 20:54:INFO    AT data_prep.py:217: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\customers_prepared.csv
+2025-11-07 20:54:INFO    AT data_prep.py:241: --------------------------------------------------------------------------------
+2025-11-07 20:54:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\products_data.csv.
+2025-11-07 20:54:INFO    AT data_prep.py:40: products_data.csv: loaded DataFrame with shape 100 rows x 6 cols
+2025-11-07 20:54:INFO    AT data_prep.py:114: Processing product data...
+2025-11-07 20:54:INFO    AT data_prep.py:121: Before cleaning - Null counts: 1, Duplicates: 0
+2025-11-07 20:54:INFO    AT data_prep.py:139: After cleaning - Null counts: 0, Duplicates: 0
+2025-11-07 20:54:INFO    AT data_prep.py:143: Product data processed: 100 rows
+2025-11-07 20:54:INFO    AT data_prep.py:217: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\products_prepared.csv
+2025-11-07 20:54:INFO    AT data_prep.py:248: --------------------------------------------------------------------------------
+2025-11-07 20:54:INFO    AT data_prep.py:37: Reading raw data from C:\GitHub_Repo\pro-analytics-02\data\raw\sales_data.csv.
+2025-11-07 20:54:INFO    AT data_prep.py:40: sales_data.csv: loaded DataFrame with shape 2001 rows x 9 cols
+2025-11-07 20:54:INFO    AT data_prep.py:156: Processing sales data...
+2025-11-07 20:54:INFO    AT data_prep.py:163: Before cleaning - Null counts: 2, Duplicates: 0
+2025-11-07 20:54:INFO    AT data_prep.py:183: Removed 66 outliers from SaleAmount using IQR method
+2025-11-07 20:54:INFO    AT data_prep.py:195: After cleaning - Null counts: 0, Duplicates: 0
+2025-11-07 20:54:INFO    AT data_prep.py:199: Sales data processed: 1933 rows
+2025-11-07 20:54:INFO    AT data_prep.py:217: Saved cleaned data to C:\GitHub_Repo\pro-analytics-02\data\prepared\sales_prepared.csv
+2025-11-07 20:54:INFO    AT data_prep.py:254: ================================================================================
+2025-11-07 20:54:INFO    AT data_prep.py:255: Data preparation complete.
+2025-11-07 20:54:INFO    AT data_prep.py:256: ================================================================================
