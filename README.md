@@ -1,9 +1,109 @@
-## P2 Notes (Reading raw data into DataFrames)
-- Created `src/analytics_project/data_prep.py` to read raw CSVs into pandas DataFrames.
-- Ran the module and logged shapes to `project.log`.
-- Commands used:
-  - `python -m analytics_project.data_prep`
-  - `git add -A && git commit -m "Add data_prep and log shapes" && git push origin main`
+## P2 Notes (Data Processing with DataScrubber)
+
+### Data Preparation Pipeline (`data_prep.py`)
+- **Purpose**: Reads raw CSV files, cleans them using the DataScrubber class, and saves processed data to the prepared directory
+- **Input**: Raw CSV files from `data/raw/` (customers, products, sales)
+- **Output**: Cleaned CSV files in `data/prepared/`
+- **Features**:
+  - Removes duplicate records
+  - Handles missing values (fill or drop strategies)
+  - Standardizes string formatting (uppercase/lowercase, trim whitespace)
+  - Converts data types (e.g., string to float)
+  - Removes statistical outliers using IQR method
+  - Parses date columns to standard datetime format
+  - Validates data consistency before and after cleaning
+  - Comprehensive logging throughout the process
+
+### DataScrubber Class (`data_scrubber.py`)
+A reusable utility class for performing common data cleaning and preparation tasks on pandas DataFrames.
+
+**Available Methods (15 total):**
+1. `__init__(df)` - Initialize with a DataFrame
+2. `check_data_consistency_before_cleaning()` - Log nulls and duplicates before processing
+3. `check_data_consistency_after_cleaning()` - Validate no nulls/duplicates remain
+4. `convert_column_to_new_data_type(column, new_type)` - Convert column data types
+5. `drop_columns(columns)` - Remove specified columns
+6. `filter_column_outliers(column, lower_bound, upper_bound)` - Remove outliers with manual bounds
+7. `filter_column_outliers_iqr(column, multiplier=1.5)` - Remove outliers using IQR method
+8. `format_column_strings_to_lower_and_trim(column)` - Lowercase and trim strings
+9. `format_column_strings_to_upper_and_trim(column)` - Uppercase and trim strings
+10. `handle_missing_data(drop=False, fill_value=None)` - Handle missing values
+11. `inspect_data()` - Get DataFrame info and statistics
+12. `parse_dates_to_add_standard_datetime(column)` - Parse dates to datetime format
+13. `remove_duplicate_records()` - Remove duplicate rows
+14. `rename_columns(column_mapping)` - Rename columns using dictionary
+15. `reorder_columns(columns)` - Reorder DataFrame columns
+
+**Example Usage:**
+```python
+from analytics_project.data_scrubber import DataScrubber
+
+# Initialize with DataFrame
+scrubber = DataScrubber(df)
+
+# Check consistency
+before_stats = scrubber.check_data_consistency_before_cleaning()
+
+# Clean the data
+df_cleaned = scrubber.remove_duplicate_records()
+scrubber = DataScrubber(df_cleaned)
+df_cleaned = scrubber.handle_missing_data(fill_value="Unknown")
+
+# Remove outliers using IQR method
+scrubber = DataScrubber(df_cleaned)
+df_cleaned = scrubber.filter_column_outliers_iqr("SaleAmount", multiplier=1.5)
+
+# Validate results
+scrubber = DataScrubber(df_cleaned)
+after_stats = scrubber.check_data_consistency_after_cleaning()
+```
+
+### Testing & Code Coverage
+
+**Run Unit Tests:**
+```shell
+# Run all tests
+uv run pytest tests/test_data_scrubber.py -v
+
+# Run specific test class
+uv run pytest tests/test_data_scrubber.py::TestFilterColumnOutliers -v
+
+# Run with coverage report
+uv run pytest tests/test_data_scrubber.py -v --cov=src/analytics_project/data_scrubber --cov-report=term-missing
+```
+
+**Test Statistics:**
+- Total Tests: 50 (all passing)
+- Code Coverage: 100% on data_scrubber.py
+- Test Classes: 14 (covering all DataScrubber methods)
+
+**Generate HTML Coverage Report:**
+```shell
+uv run pytest tests/test_data_scrubber.py --cov=src/analytics_project/data_scrubber --cov-report=html
+# Open htmlcov/index.html in browser to view detailed coverage
+```
+
+### Run Data Processing Pipeline
+
+```shell
+# Process all CSV files (customers, products, sales)
+uv run python -m analytics_project.data_prep
+```
+
+**Processing Results:**
+- **Customers**: 201 → 200 rows (removed 1 duplicate, filled 1 null, standardized Region to uppercase, parsed JoinDate)
+- **Products**: 100 rows (filled 1 null in ReorderLevel)
+- **Sales**: 2001 → 1933 rows (dropped 2 rows with nulls, removed 66 outliers from SaleAmount using IQR)
+
+**Output Location:** `data/prepared/` directory contains cleaned CSV files
+
+### Commands Used:
+```shell
+python -m analytics_project.data_prep
+git add -A && git commit -m "Add DataScrubber class with comprehensive data cleaning methods" && git push origin main
+```
+
+---
 
 # Pro Analytics 02 Python Starter Repository
 
