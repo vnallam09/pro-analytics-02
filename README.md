@@ -99,9 +99,86 @@ uv run python -m analytics_project.data_prep
 
 ### Commands Used:
 ```shell
-python -m analytics_project.data_prep
-git add -A && git commit -m "Add DataScrubber class with comprehensive data cleaning methods" && git push origin main
+# Run data preparation
+uv run python -m analytics_project.data_prep
+
+# Run ETL to create and populate data warehouse
+uv run python -m analytics_project.dw.etl_to_dw
+
+# Validate data warehouse
+uv run python -m analytics_project.dw.validate_dw
+
+# Git commands
+git add -A && git commit -m "Add data processing and warehouse implementation" && git push origin main
 ```
+
+---
+
+## Data Warehouse Design & Implementation
+
+### Overview
+This project implements a **Star Schema** data warehouse optimized for analytics and business intelligence. The design follows dimensional modeling best practices with a central fact table surrounded by dimension tables.
+
+### Schema Design
+- **Fact Table**: `fact_sales` (1,931 transactions)
+  - Measures: `SaleAmount`, `CommissionPercent`
+  - Foreign Keys: `CustomerID`, `ProductID`
+  - Attributes: `SaleDate`, `StoreID`, `CampaignID`, `OrderChannel`
+
+- **Dimension Tables**:
+  - `dim_customers` (200 records) - Customer demographics and attributes
+  - `dim_products` (100 records) - Product catalog and specifications
+
+### Key Features
+- ✅ **Referential Integrity**: Foreign key constraints enforced
+- ✅ **Performance Optimization**: 8 strategic indexes on fact and dimension tables
+- ✅ **Data Quality**: 100% referential integrity validation passed
+- ✅ **Total Revenue**: $1,750,640.79 across all transactions
+
+### ETL Pipeline
+Create and populate the data warehouse using the ETL script:
+
+```shell
+# Run ETL to create schema and load data
+uv run python -m analytics_project.dw.etl_to_dw
+```
+
+**ETL Process:**
+1. Creates data warehouse schema (tables, foreign keys, indexes)
+2. Loads dimension tables first (customers, products)
+3. Loads fact table with referential integrity checks
+4. Validates data quality and relationships
+
+### Validation & Testing
+Verify the data warehouse structure and data integrity:
+
+```shell
+# Run comprehensive validation
+uv run python -m analytics_project.dw.validate_dw
+```
+
+**Validation Checks:**
+- Table structure and schema verification
+- Record counts and data quality metrics
+- Referential integrity (0 orphaned records)
+- Sample analytical queries demonstrating star schema functionality
+
+### Viewing the Database
+The SQLite database can be viewed in VS Code:
+1. Locate `data_warehouse.db` in the project root
+2. Right-click and select "Open Database" (requires SQLite Viewer extension)
+3. Browse tables, run queries, and explore the data
+
+### Documentation
+For complete details about the data warehouse design, see:
+- **📄 [Data Warehouse Schema Design](./data_warehouse_schema.md)** - Complete schema documentation with DDL, relationships, and query patterns
+- **📊 [Validation Results](./DW_VALIDATION_RESULTS.md)** - Validation results, sample queries, and analytical insights
+
+### Sample Insights
+- **Top Region**: EAST leads with $600,926 in sales (652 transactions)
+- **Best Product Category**: Electronics has highest avg sale ($1,078.88)
+- **Channel Distribution**: All order channels evenly balanced (~20% each)
+- **Customer Segments**: Retail industry generates most revenue ($360,445)
 
 ---
 
@@ -223,16 +300,22 @@ uv run mkdocs serve
 
 ### 3.4 Execute
 
-This project includes demo code.
+This project includes demo code and data warehouse ETL pipelines.
 Run the demo Python modules to confirm everything is working.
 
 In VS Code terminal, run:
 
 ```shell
+# Demo modules
 uv run python -m analytics_project.demo_module_basics
 uv run python -m analytics_project.demo_module_languages
 uv run python -m analytics_project.demo_module_stats
 uv run python -m analytics_project.demo_module_viz
+
+# Data processing and warehouse
+uv run python -m analytics_project.data_prep          # Clean and prepare data
+uv run python -m analytics_project.dw.etl_to_dw       # Create and populate data warehouse
+uv run python -m analytics_project.dw.validate_dw     # Validate data warehouse
 ```
 
 You should see:
