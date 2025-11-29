@@ -1796,3 +1796,115 @@ dtype: int64
 2025-11-14 19:41:SUCCESS AT validate_dw.py:532: ✅ DATA WAREHOUSE VALIDATION COMPLETED SUCCESSFULLY
 2025-11-14 19:41:INFO    AT validate_dw.py:533: ======================================================================
 2025-11-14 19:41:INFO    AT validate_dw.py:544: Database connection closed
+2025-11-28 20:40:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-28 20:40:INFO    AT etl_to_dw.py:483: ======================================================================
+2025-11-28 20:40:INFO    AT etl_to_dw.py:484: Starting Data Warehouse ETL Pipeline
+2025-11-28 20:40:INFO    AT etl_to_dw.py:485: ======================================================================
+2025-11-28 20:40:INFO    AT etl_to_dw.py:134: Connected to database: C:\GitHub_Repo\pro-analytics-02\data_warehouse.db
+2025-11-28 20:40:INFO    AT etl_to_dw.py:161: Creating data warehouse schema...
+2025-11-28 20:40:INFO    AT etl_to_dw.py:164: Creating dim_customers table...
+2025-11-28 20:40:INFO    AT etl_to_dw.py:167: Creating dim_products table...
+2025-11-28 20:40:INFO    AT etl_to_dw.py:171: Creating fact_sales table...
+2025-11-28 20:40:INFO    AT etl_to_dw.py:175: Creating indexes...
+2025-11-28 20:40:SUCCESS AT etl_to_dw.py:181: Data warehouse schema created successfully!
+2025-11-28 20:40:INFO    AT etl_to_dw.py:494: ----------------------------------------------------------------------
+2025-11-28 20:40:INFO    AT etl_to_dw.py:495: Loading Dimension Tables
+2025-11-28 20:40:INFO    AT etl_to_dw.py:496: ----------------------------------------------------------------------
+2025-11-28 20:40:INFO    AT etl_to_dw.py:215: Loading customers from customers_prepared.csv...
+2025-11-28 20:40:ERROR   AT etl_to_dw.py:249: Failed to load customer data: FOREIGN KEY constraint failed
+2025-11-28 20:40:ERROR   AT etl_to_dw.py:528: ETL Pipeline failed: FOREIGN KEY constraint failed
+2025-11-28 20:40:INFO    AT etl_to_dw.py:534: Database connection closed
+2025-11-28 20:40:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-28 20:40:INFO    AT etl_to_dw.py:483: ======================================================================
+2025-11-28 20:40:INFO    AT etl_to_dw.py:484: Starting Data Warehouse ETL Pipeline
+2025-11-28 20:40:INFO    AT etl_to_dw.py:485: ======================================================================
+2025-11-28 20:40:INFO    AT etl_to_dw.py:134: Connected to database: C:\GitHub_Repo\pro-analytics-02\data_warehouse.db
+2025-11-28 20:40:INFO    AT etl_to_dw.py:161: Creating data warehouse schema...
+2025-11-28 20:40:INFO    AT etl_to_dw.py:164: Creating dim_customers table...
+2025-11-28 20:40:INFO    AT etl_to_dw.py:167: Creating dim_products table...
+2025-11-28 20:40:INFO    AT etl_to_dw.py:171: Creating fact_sales table...
+2025-11-28 20:40:INFO    AT etl_to_dw.py:175: Creating indexes...
+2025-11-28 20:40:SUCCESS AT etl_to_dw.py:181: Data warehouse schema created successfully!
+2025-11-28 20:40:INFO    AT etl_to_dw.py:494: ----------------------------------------------------------------------
+2025-11-28 20:40:INFO    AT etl_to_dw.py:495: Loading Dimension Tables
+2025-11-28 20:40:INFO    AT etl_to_dw.py:496: ----------------------------------------------------------------------
+2025-11-28 20:40:INFO    AT etl_to_dw.py:215: Loading customers from customers_prepared.csv...
+2025-11-28 20:40:SUCCESS AT etl_to_dw.py:244: Loaded 200 customer records into dim_customers
+2025-11-28 20:40:INFO    AT etl_to_dw.py:274: Loading products from products_prepared.csv...
+2025-11-28 20:40:SUCCESS AT etl_to_dw.py:298: Loaded 100 product records into dim_products
+2025-11-28 20:40:INFO    AT etl_to_dw.py:502: ----------------------------------------------------------------------
+2025-11-28 20:40:INFO    AT etl_to_dw.py:503: Loading Fact Table
+2025-11-28 20:40:INFO    AT etl_to_dw.py:504: ----------------------------------------------------------------------
+2025-11-28 20:40:INFO    AT etl_to_dw.py:332: Loading sales from sales_prepared.csv...
+2025-11-28 20:40:WARNING AT etl_to_dw.py:369: Skipping transaction 41: FOREIGN KEY constraint failed
+2025-11-28 20:40:SUCCESS AT etl_to_dw.py:374: Loaded 1932 sales records into fact_sales
+2025-11-28 20:40:WARNING AT etl_to_dw.py:376: Skipped 1 records due to referential integrity issues
+2025-11-28 20:40:INFO    AT etl_to_dw.py:509: ----------------------------------------------------------------------
+2025-11-28 20:40:INFO    AT etl_to_dw.py:510: Validating Data Warehouse
+2025-11-28 20:40:INFO    AT etl_to_dw.py:511: ----------------------------------------------------------------------
+2025-11-28 20:40:INFO    AT etl_to_dw.py:405: Validating data warehouse...
+2025-11-28 20:40:SUCCESS AT etl_to_dw.py:446: Data warehouse validation complete!
+2025-11-28 20:40:INFO    AT etl_to_dw.py:447: Customers: 200
+2025-11-28 20:40:INFO    AT etl_to_dw.py:448: Products: 100
+2025-11-28 20:40:INFO    AT etl_to_dw.py:449: Sales Transactions: 1931
+2025-11-28 20:40:INFO    AT etl_to_dw.py:450: Total Sales Amount: $1,750,640.79
+2025-11-28 20:40:INFO    AT etl_to_dw.py:451: Orphaned Customer References: 0
+2025-11-28 20:40:INFO    AT etl_to_dw.py:452: Orphaned Product References: 0
+2025-11-28 20:40:INFO    AT etl_to_dw.py:516: ======================================================================
+2025-11-28 20:40:INFO    AT etl_to_dw.py:517: ETL Pipeline Summary
+2025-11-28 20:40:INFO    AT etl_to_dw.py:518: ======================================================================
+2025-11-28 20:40:INFO    AT etl_to_dw.py:519: Database Location: C:\GitHub_Repo\pro-analytics-02\data_warehouse.db
+2025-11-28 20:40:INFO    AT etl_to_dw.py:520: Customers Loaded: 200
+2025-11-28 20:40:INFO    AT etl_to_dw.py:521: Products Loaded: 100
+2025-11-28 20:40:INFO    AT etl_to_dw.py:522: Sales Loaded: 1932
+2025-11-28 20:40:INFO    AT etl_to_dw.py:523: Sales Skipped: 1
+2025-11-28 20:40:SUCCESS AT etl_to_dw.py:524: ETL Pipeline completed successfully! 🎉
+2025-11-28 20:40:INFO    AT etl_to_dw.py:525: ======================================================================
+2025-11-28 20:40:INFO    AT etl_to_dw.py:534: Database connection closed
+2025-11-28 20:43:INFO    AT utils_logger.py:105: Logging to file: C:\GitHub_Repo\pro-analytics-02\project.log
+2025-11-28 20:43:INFO    AT etl_to_dw.py:483: ======================================================================
+2025-11-28 20:43:INFO    AT etl_to_dw.py:484: Starting Data Warehouse ETL Pipeline
+2025-11-28 20:43:INFO    AT etl_to_dw.py:485: ======================================================================
+2025-11-28 20:43:INFO    AT etl_to_dw.py:134: Connected to database: C:\GitHub_Repo\pro-analytics-02\data_warehouse.db
+2025-11-28 20:43:INFO    AT etl_to_dw.py:161: Creating data warehouse schema...
+2025-11-28 20:43:INFO    AT etl_to_dw.py:164: Creating dim_customers table...
+2025-11-28 20:43:INFO    AT etl_to_dw.py:167: Creating dim_products table...
+2025-11-28 20:43:INFO    AT etl_to_dw.py:171: Creating fact_sales table...
+2025-11-28 20:43:INFO    AT etl_to_dw.py:175: Creating indexes...
+2025-11-28 20:43:SUCCESS AT etl_to_dw.py:181: Data warehouse schema created successfully!
+2025-11-28 20:43:INFO    AT etl_to_dw.py:494: ----------------------------------------------------------------------
+2025-11-28 20:43:INFO    AT etl_to_dw.py:495: Loading Dimension Tables
+2025-11-28 20:43:INFO    AT etl_to_dw.py:496: ----------------------------------------------------------------------
+2025-11-28 20:43:INFO    AT etl_to_dw.py:215: Loading customers from customers_prepared.csv...
+2025-11-28 20:43:SUCCESS AT etl_to_dw.py:244: Loaded 200 customer records into dim_customers
+2025-11-28 20:43:INFO    AT etl_to_dw.py:274: Loading products from products_prepared.csv...
+2025-11-28 20:43:SUCCESS AT etl_to_dw.py:298: Loaded 100 product records into dim_products
+2025-11-28 20:43:INFO    AT etl_to_dw.py:502: ----------------------------------------------------------------------
+2025-11-28 20:43:INFO    AT etl_to_dw.py:503: Loading Fact Table
+2025-11-28 20:43:INFO    AT etl_to_dw.py:504: ----------------------------------------------------------------------
+2025-11-28 20:43:INFO    AT etl_to_dw.py:332: Loading sales from sales_prepared.csv...
+2025-11-28 20:43:WARNING AT etl_to_dw.py:369: Skipping transaction 41: FOREIGN KEY constraint failed
+2025-11-28 20:43:SUCCESS AT etl_to_dw.py:374: Loaded 1931 sales records into fact_sales
+2025-11-28 20:43:WARNING AT etl_to_dw.py:376: Skipped 1 records due to referential integrity issues
+2025-11-28 20:43:INFO    AT etl_to_dw.py:509: ----------------------------------------------------------------------
+2025-11-28 20:43:INFO    AT etl_to_dw.py:510: Validating Data Warehouse
+2025-11-28 20:43:INFO    AT etl_to_dw.py:511: ----------------------------------------------------------------------
+2025-11-28 20:43:INFO    AT etl_to_dw.py:405: Validating data warehouse...
+2025-11-28 20:43:SUCCESS AT etl_to_dw.py:446: Data warehouse validation complete!
+2025-11-28 20:43:INFO    AT etl_to_dw.py:447: Customers: 200
+2025-11-28 20:43:INFO    AT etl_to_dw.py:448: Products: 100
+2025-11-28 20:43:INFO    AT etl_to_dw.py:449: Sales Transactions: 1930
+2025-11-28 20:43:INFO    AT etl_to_dw.py:450: Total Sales Amount: $1,749,903.26
+2025-11-28 20:43:INFO    AT etl_to_dw.py:451: Orphaned Customer References: 0
+2025-11-28 20:43:INFO    AT etl_to_dw.py:452: Orphaned Product References: 0
+2025-11-28 20:43:INFO    AT etl_to_dw.py:516: ======================================================================
+2025-11-28 20:43:INFO    AT etl_to_dw.py:517: ETL Pipeline Summary
+2025-11-28 20:43:INFO    AT etl_to_dw.py:518: ======================================================================
+2025-11-28 20:43:INFO    AT etl_to_dw.py:519: Database Location: C:\GitHub_Repo\pro-analytics-02\data_warehouse.db
+2025-11-28 20:43:INFO    AT etl_to_dw.py:520: Customers Loaded: 200
+2025-11-28 20:43:INFO    AT etl_to_dw.py:521: Products Loaded: 100
+2025-11-28 20:43:INFO    AT etl_to_dw.py:522: Sales Loaded: 1931
+2025-11-28 20:43:INFO    AT etl_to_dw.py:523: Sales Skipped: 1
+2025-11-28 20:43:SUCCESS AT etl_to_dw.py:524: ETL Pipeline completed successfully! 🎉
+2025-11-28 20:43:INFO    AT etl_to_dw.py:525: ======================================================================
+2025-11-28 20:43:INFO    AT etl_to_dw.py:534: Database connection closed
