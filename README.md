@@ -358,5 +358,97 @@ Before starting a new session, remember to do a `git pull` and keep your tools u
 Each time forward progress is made, remember to git add-commit-push.
 
 
-### 4.1 to run py scripts use
+### 4.1 Run Python Scripts
+
+To run Python scripts use:
+
+```shell
 uv run python -m analytics_project.demo_module_basics
+```
+
+---
+
+## Campaign Performance Dashboard: Data Analysis Report
+
+### Executive Summary
+
+This analysis examines sales performance across 4 campaigns, generating $1.75M in total revenue with $171.91K in commission costs (6.72% average commission rate). The dashboard implements OLAP operations—slicing, dicing, and drill-down—to enable multi-dimensional business intelligence.
+
+### Key Findings
+
+#### 1. Campaign & Store Performance (Dicing Analysis)
+
+The Campaign × Store matrix reveals significant performance variations:
+
+- **Campaign 3.00** shows the strongest overall performance with $486,956 in total revenue
+- **Store 404** is the top-performing location across most campaigns ($468,367 total)
+- **Campaign 2.00 in Store 403** demonstrates the highest single combination revenue at $146,843 (highlighted in green)
+- **Campaign 1.00 in Store 404** underperforms at $94,313 (highlighted in red), indicating a need for strategic review
+
+**Business Insight**: Store 404's consistent strong performance suggests best practices that could be replicated across other locations. The Campaign 1.00 underperformance warrants investigation into campaign messaging, timing, or target audience alignment.
+
+#### 2. Temporal Trends (Drill-Down Analysis)
+
+The hierarchical time analysis (Year → Quarter → Month → Day) reveals:
+
+- Revenue remains relatively stable across quarters from 2020-2024, hovering around 1.75M per quarter
+- Q2 2022 shows a notable spike to approximately 1.8M, suggesting seasonal factors or successful initiatives
+- The flat trend line indicates consistent market presence but limited growth momentum
+- Single-day analysis (5/4/2025) shows concentrated activity, confirming operational focus
+
+**Business Insight**: The plateau in quarterly revenue suggests market saturation or missed growth opportunities. The Q2 2022 spike should be analyzed to identify replicable success factors.
+
+#### 3. Commission Efficiency (Slicing Analysis)
+
+Using the campaign and store slicers to isolate performance:
+
+- 6.72% average commission represents a standardized cost structure
+- Total commission cost of $171.91K on $1.75M revenue yields approximately 10:1 revenue-to-commission ratio
+- Individual campaign analysis shows commission rates vary slightly, suggesting negotiated or tiered structures
+
+**Business Insight**: The commission structure appears sustainable, but opportunities may exist to optimize rates based on performance tiers or volume thresholds.
+
+### OLAP Operations Implementation
+
+#### Slicing
+
+Three interactive slicers enable dimensional filtering:
+
+- **Campaign Slicer**: Isolates specific campaign performance
+- **Store Slicer**: Filters by location
+- **Date Range Slicer**: Enables custom temporal analysis
+
+**Use Case**: Marketing managers can slice data to "Campaign 2 in Store 403 during Q2" to evaluate targeted initiatives.
+
+#### Dicing
+
+The Campaign × Store matrix provides simultaneous two-dimensional analysis with heatmap visualization:
+
+- Green cells indicate high-performing combinations (>$140K)
+- Red cells flag underperforming pairs (<$95K)
+- Row/column totals enable comparative analysis across dimensions
+
+**Use Case**: Identify which campaign-store combinations warrant increased investment versus reallocation.
+
+#### Drill-Down
+
+Hierarchical date navigation (Year → Quarter → Month → Day) enables progressive granularity:
+
+- **Year level**: Strategic overview of annual trends
+- **Quarter level**: Seasonal pattern identification
+- **Month level**: Campaign timing optimization
+- **Day level**: Operational detail for specific events
+
+**Use Case**: Executive stakeholders start with yearly trends, while operations teams drill to daily transaction patterns.
+
+### Recommendations
+
+1. **Replicate Store 404 Success**: Conduct operational audit to identify transferable best practices to stores 401-403
+2. **Investigate Campaign 1.00 Underperformance**: Analyze messaging, audience targeting, and timing to improve ROI, particularly in Store 404 where the gap is most pronounced
+3. **Capitalize on Q2 Opportunities**: Replicate Q2 2022 strategies that drove the revenue spike; investigate seasonal factors
+4. **Drive Growth**: The flat revenue trend indicates need for market expansion, new campaign strategies, or customer acquisition initiatives to break the plateau
+5. **Optimize Campaign-Store Matching**: Use the dicing matrix to reallocate marketing spend toward green (high-performing) combinations and either fix or discontinue red (underperforming) pairs
+
+### Conclusion
+
+This multi-dimensional analysis demonstrates that while overall revenue is stable at $1.75M, significant optimization opportunities exist at the campaign-store intersection level. The drill-down capability reveals temporal stability with isolated spikes, while slicing operations enable focused investigation of specific business scenarios. Strategic reallocation based on the dicing matrix insights could improve overall ROI without increasing total spend.
